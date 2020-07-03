@@ -18,4 +18,11 @@
     <external-path
         name="my_images"
         path="Android/data/com.zhihu.matisse.sample/files/Pictures"/>
+    <!--        自定义部分-->
+    <!--外部公 根目录 代表外部存储区域的根目录下的文件 Environment.getExternalStorageDirectory()/Pictures/ 目录-->
+    <!--        /storage/emulated/0/BearNote/media/video  目录-->
+    <external-path
+        name="my_media"
+        path="BearNote/medias/videos" />
+    <root-path name="root_path" path="."/>
 </paths>

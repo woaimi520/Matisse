@@ -113,9 +113,10 @@ public class MediaStoreCompat {
         String imageFileName = String.format("JPEG_%s.jpg", timeStamp);
         File storageDir;
         if (mCaptureStrategy.isPublic) {
-            storageDir = Environment.getExternalStoragePublicDirectory(
-                    Environment.DIRECTORY_PICTURES);
-            if (!storageDir.exists()) storageDir.mkdirs();
+            storageDir = StorageUtilsJava.getPhotosDir();
+//            storageDir = Environment.getExternalStoragePublicDirectory(
+//                    Environment.DIRECTORY_PICTURES);
+//            if (!storageDir.exists()) storageDir.mkdirs();
         } else {
             storageDir = mContext.get().getExternalFilesDir(Environment.DIRECTORY_PICTURES);
         }
